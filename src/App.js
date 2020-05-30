@@ -9,6 +9,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import { makeStyles } from '@material-ui/core/styles';
+import PaymentIcon from '@material-ui/icons/Payment';
+import Container from '@material-ui/core/Container';
+import Checkout from './page/Checkout';
 
 function App() {
 
@@ -41,6 +44,13 @@ function App() {
         cardActions: {
             justifyContent: "center",
         },
+        cardPricing: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'baseline',
+            marginTop: theme.spacing(2),
+            marginBottom: theme.spacing(2),
+        },
         footer: {
             backgroundColor: theme.palette.background.paper,
             padding: theme.spacing(6),
@@ -54,21 +64,29 @@ function App() {
 
                 <AppBar position="relative">
                     <Toolbar>
-                        <CameraIcon className={classes.icon} />
+                        <PaymentIcon className={classes.icon} />
                         <Typography variant="h6" color="inherit" noWrap>
-                            Album layout
+                            Paypal Gateway Test
                         </Typography>
                     </Toolbar>
                 </AppBar>
 
-                <header className="">
+                {/* Hero unit */}
+                <Container maxWidth="sm" component="main" className={classes.heroContent}>
+                    <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                    Importante
+                    </Typography>
+                    <Typography variant="h5" align="center" color="textSecondary" component="p">
+                    Paymanual contiene return y return_cancel, no retorna automáticamente.
+                    </Typography>
+                </Container>
+                {/* End hero unit */}
 
-                </header>
 
 
                 <Switch>
-                    <Route path="/about">
-                        <PaypalButton />
+                    <Route path="/checkout">
+                        <Checkout />
                     </Route>
                     <Route path="/users">
                         <PaypalButton />

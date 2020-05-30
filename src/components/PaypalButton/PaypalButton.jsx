@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import DeleteIcon from '@material-ui/icons/Delete';
+import SyncIcon from '@material-ui/icons/Sync';
+import SyncDisabledIcon from '@material-ui/icons/SyncDisabled';
 
 class PaypalButton extends(React.Component){
 
@@ -24,16 +25,30 @@ class PaypalButton extends(React.Component){
                     ? <input type="hidden" name="cancel_return" value={process.env.REACT_APP_PAYPAL_CANCEL_RETURN}/>
                     : ""
                 }
-                <Button
+                {this.props.sync ? 
+                    <Button
                     type="submit"
                     variant="contained"
                     color="secondary"
                     className={""}
                     alt="PayPal, la forma más segura y rápida de pagar en línea."
-                    startIcon={<DeleteIcon />}
-                >
-                    Delete
-                </Button>
+                    startIcon={<SyncIcon />}
+                    >
+                        PayAuto
+                    </Button> :
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        color="secondary"
+                        className={""}
+                        alt="PayPal, la forma más segura y rápida de pagar en línea."
+                        startIcon={<SyncDisabledIcon />}   
+                    >
+                        PayManual
+                    </Button>
+                  }
+
+                
 
             </form>
         )
