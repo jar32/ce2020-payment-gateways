@@ -1,34 +1,29 @@
 import React from "react";
+import CancelIcon from '@material-ui/icons/Cancel';
 import Button from "@material-ui/core/Button";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import {Link} from "react-router-dom";
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Container from "@material-ui/core/Container";
 
-class ThankYouPage extends (React.Component){
+class Cancel extends (React.Component){
     render() {
-
-        //const classes = this.props.classes;
 
         return(
 
-            <header className="App-header">
+            <header className="App-header-cancel">
                 <Container maxWidth="md">
-                    <CheckCircleIcon className="check-icon "/>
+                    <CancelIcon className="cancel-icon"/>
                     <h1>
-                        LA COMPRA SE HA REALIZADO CORRECTAMENTE. ¡MUCHAS GRACIAS POR SU CONFIANZA!
+                        PAGO CANCELADO!
                     </h1>
                     <p>
-                        Gracias por su pago. Su transacción ha finalizado y le hemos enviado un recibo
-                        de su compra por correo electrónico. Puede acceder a su cuenta,
-                        www.sandbox.paypal.com/es, para ver los detalles de esta transacción.
+                        El pago ha sido cancelado y su transacción no ha finalizado
                     </p>
-
                     <Link className="App-link" to={'/'} >
                         <Button
                             type="submit"
                             variant="contained"
-                            color="primary"
+                            color="secondary"
                             className={""}
                             alt="PayPal, la forma más segura y rápida de pagar en línea."
                             endIcon={<ArrowForwardIosIcon className={'App-logo'}/>}
@@ -42,4 +37,4 @@ class ThankYouPage extends (React.Component){
     }
 }
 
-export default ThankYouPage;
+export default Cancel;
