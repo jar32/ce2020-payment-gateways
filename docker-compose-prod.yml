@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+
+  ce2020-payment-gateways-front:
+    container_name: ce2020-payment-gateways-front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+      - ./html:/usr/share/nginx/html:ro # en la ruta /var/www/html del servidor, crear un index.html
+    environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=${LE_FRONT_DOMAIN}
+      - LETSENCRYPT_HOST=${LE_FRONT_DOMAIN}
+      - LETSENCRYPT_EMAIL=${LE_ADMIN_EMAIL}
+    networks:
+      - ce2020_gateways_default
+      - nginx-proxy
+
+
+networks:
+  ce2020_gateways_default:
+    name: spa_default
+  nginx-proxy:
+    external:
+      name: nginx-proxy

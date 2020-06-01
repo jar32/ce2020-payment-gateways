@@ -47,7 +47,7 @@ class Checkout extends(React.Component){
                         Checkout
                     </Typography>
                     <Typography variant="h5" align="center" color="textSecondary" component="p">
-                        Paymanual contiene return y return_cancel, no retorna automáticamente.
+                        Selecciona un método de pago.
                     </Typography>
                 </Container>
                 {/* End hero unit */}
