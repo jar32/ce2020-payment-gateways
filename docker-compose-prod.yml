@@ -25,7 +25,7 @@ services:
 
 networks:
   ce2020_gateways_default:
-    name: spa_default
+    name: ce2020_gateways_default
   nginx-proxy:
     external:
       name: nginx-proxy

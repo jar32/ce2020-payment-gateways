@@ -134,7 +134,7 @@ function App() {
                             Nota
                         </Typography>
                         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                            Este sitio es una prueba
+                            Este sitio es una práctica de CE de la UMH
                         </Typography>
 
                     </footer>
