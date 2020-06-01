@@ -15,9 +15,9 @@ class ThankYouPage extends (React.Component){
             <header className="App-header">
                 <Container maxWidth="md">
                     <CheckCircleIcon className="check-icon "/>
-                    <h1>
+                    <h3>
                         LA COMPRA SE HA REALIZADO CORRECTAMENTE. ¡MUCHAS GRACIAS POR SU CONFIANZA!
-                    </h1>
+                    </h3>
                     <p>
                         Gracias por su pago. Su transacción ha finalizado y le hemos enviado un recibo
                         de su compra por correo electrónico. Puede acceder a su cuenta,

@@ -42,18 +42,21 @@ class ProductCard extends (React.Component){
                     </div>
                 </CardContent>
                 <CardActions className={classes.cardActions}>
-                    <Link to={'/checkout/'+(this.props.card.id-1)} >
-                    <Button
-                        type="submit"
-                        variant="contained"
-                        color="secondary"
-                        className={""}
-                        alt="PayPal, la forma más segura y rápida de pagar en línea."
-                        startIcon={<ShoppingCartIcon />}
-                    >
-                        Comprar
-                    </Button>
-                    </Link>
+                    {this.props.disable_link ?
+                        '' :
+                        <Link to={'/checkout/' + (this.props.card.id - 1)}>
+                            <Button
+                                type="submit"
+                                variant="contained"
+                                color="secondary"
+                                className={""}
+                                alt="PayPal, la forma más segura y rápida de pagar en línea."
+                                startIcon={<ShoppingCartIcon/>}
+                            >
+                                Adquirir
+                            </Button>
+                        </Link>
+                    }
                 </CardActions>
             </Card>
         )

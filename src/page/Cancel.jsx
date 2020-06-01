@@ -13,9 +13,9 @@ class Cancel extends (React.Component){
             <header className="App-header-cancel">
                 <Container maxWidth="md">
                     <CancelIcon className="cancel-icon"/>
-                    <h1>
+                    <h3>
                         PAGO CANCELADO!
-                    </h1>
+                    </h3>
                     <p>
                         El pago ha sido cancelado y su transacción no ha finalizado
                     </p>

@@ -76,7 +76,7 @@ function App() {
     const cards = [
         {'id' : 1, 'name': 'Turismo', 'price':25,
             'Description': 'Disfrute del circuito',
-            'img': 'https://drive-my.com/images/mews2015/drive2015/1984-Citroen-CX-GTi-Turbo-series-1-road-test-drive-11.jpg'},
+            'img': 'https://i.pinimg.com/originals/a5/fa/40/a5fa407cf5e948e124a58855a4c5ad0f.jpg'},
         {'id' : 2, 'name': 'Gran Turismo', 'price':50,
             'Description': 'Tómeselo en serio',
             'img': 'https://images.unsplash.com/photo-1566274360936-69fae8dc1d95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'},
