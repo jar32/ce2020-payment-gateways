@@ -14,7 +14,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ProductCard from "../components/ProductCard/ProductCard";
 import Box from "@material-ui/core/Box";
-import NameForm from "../components/NameForm/NameForm";
+import RedsysForm from "../components/RedsysForm/RedsysForm";
 
 
 
@@ -60,8 +60,6 @@ class Checkout extends(React.Component){
                             <div>
 
                                 <Grid container wrap="nowrap" spacing={4}>
-
-
 
 
                                     <Grid item xs={12} sm={6} md={4}>
@@ -123,9 +121,9 @@ class Checkout extends(React.Component){
                                                 </Typography>
                                             </ExpansionPanelSummary>
                                             <ExpansionPanelDetails>
-                                                <Typography>
-                                                    <NameForm></NameForm>
-                                                </Typography>
+
+                                                    <RedsysForm product_id={this.props.match.params.id}></RedsysForm>
+
                                             </ExpansionPanelDetails>
                                         </ExpansionPanel>
 

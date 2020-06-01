@@ -12,7 +12,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 class ProductCard extends (React.Component){
 
     handleClick(e) {
-        console.log(e);
+        //console.log(e);
     }
 
     render() {

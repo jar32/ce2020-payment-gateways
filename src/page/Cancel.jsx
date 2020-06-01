@@ -14,10 +14,10 @@ class Cancel extends (React.Component){
                 <Container maxWidth="md">
                     <CancelIcon className="cancel-icon"/>
                     <h3>
-                        PAGO CANCELADO!
+                        LO SENTIMOS, SE HA PRODUCIDO UN ERROR EN EL PAGO.
                     </h3>
                     <p>
-                        El pago ha sido cancelado y su transacción no ha finalizado
+                        El pago ha sido cancelado y su transacción no ha finalizado. Por favor, Inténtelo de nuevo más tarde.
                     </p>
                     <Link className="App-link" to={'/'} >
                         <Button

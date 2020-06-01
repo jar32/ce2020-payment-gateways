@@ -11,6 +11,7 @@ import Checkout from './page/Checkout';
 import Cancel from "./page/Cancel";
 import ProductContext from "./context/ProductContext";
 import ThankYouPage from "./page/ThankYouPage";
+import RedsysCheckout from "./page/RedsysCheckout";
 
 function App() {
 
@@ -118,8 +119,11 @@ function App() {
                         <Route path="/thankyou">
                             <ThankYouPage classes={classes}/>
                         </Route>
+                        <Route path="/redsyscheckout" component={RedsysCheckout}>
+                            {/*<RedsysCheckout />*/}
+                        </Route>
                         <Route path="/">
-                            <Home classes={classes}/>
+                            <Home classes={classes} data={''}/>
                         </Route>
                     </Switch>
                     {/* End content */}
