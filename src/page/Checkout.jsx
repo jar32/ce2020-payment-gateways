@@ -59,15 +59,15 @@ class Checkout extends(React.Component){
                         {cards =>   (
                             <div>
 
-                                <Grid container wrap="nowrap" spacing={4}>
+                                <Grid container spacing={4}>
 
 
-                                    <Grid item xs={12} sm={6} md={4}>
+                                    <Grid item key={"0"} xs={12} sm={12} md={4}>
                                         <ProductCard classes={classes} card={cards[this.state.id]} disable_link={true} />
 
                                     </Grid>
 
-                                    <Grid item xs={12} sm={6} md={8}>
+                                    <Grid item key={"1"} xs={12} sm={12} md={8}>
                                         <Paper elevation={2} >
                                             <Box component="span" m={1}>
                                             <Typography component="h6" variant="h6" color="textPrimary">
@@ -88,7 +88,7 @@ class Checkout extends(React.Component){
                                             <ExpansionPanelDetails>
 
                                                 <Grid container wrap="nowrap" spacing={4}>
-                                                    <Grid item xs={12} sm={6} md={6}>
+                                                    <Grid item key={22} xs={12} sm={6} md={6}>
                                                         {/* Sin retorno auto*/}
                                                         <PaypalButton
                                                             return={process.env.REACT_APP_PAYPAL_RETURN}
@@ -98,7 +98,7 @@ class Checkout extends(React.Component){
                                                             item_name={cards[this.state.id].name}
                                                         />
                                                     </Grid>
-                                                    <Grid item xs={12} sm={6} md={6}>
+                                                    <Grid item key={23} xs={12} sm={6} md={6}>
                                                         {/* Con retorno auto*/}
 
                                                         <PaypalButton sync={true}
