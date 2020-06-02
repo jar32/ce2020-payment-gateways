@@ -7,14 +7,18 @@ class PaypalButton extends(React.Component){
 
     render() {
         return(
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_xclick"/>
-                <input type="hidden" name="business" value={process.env.REACT_APP_PAYPAL_EMAIL}/>
+                {this.props.sync ? // Retorno auto?
+                    <input type="hidden" name="business" value={process.env.REACT_APP_PAYPAL_EMAIL_2}/> // Si
+                    :
+                    <input type="hidden" name="business" value={process.env.REACT_APP_PAYPAL_EMAIL}/> // No
+                }
                 <input type="hidden" name="lc" value="ES"/>
-                <input type="hidden" name="button_subtype" value="services"/>
+                {/*<input type="hidden" name="button_subtype" value="services"/>*/}
                 <input type="hidden" name="item_name" value={this.props.item_name}/>
                 <input type="hidden" name="currency_code" value="EUR"/>
-                <input type="hidden" name="amount" value={this.props.amount}/>
+                <input type="hidden" name="amount" value={this.props.amount.toFixed(2)}/>
                 {/*<input type="hidden" name="no_shipping" value="1"/>*/}
                 {this.props.return
                     ? <input type="hidden" name="return" value={process.env.REACT_APP_DOMAIN + process.env.REACT_APP_PAYPAL_RETURN}/>

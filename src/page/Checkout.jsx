@@ -88,7 +88,7 @@ class Checkout extends(React.Component){
                                             <ExpansionPanelDetails>
 
                                                 <Grid container wrap="nowrap" spacing={4}>
-                                                    <Grid item key={22} xs={12} sm={6} md={6}>
+                                                    <Grid item xs={12} sm={6} md={6}>
                                                         {/* Sin retorno auto*/}
                                                         <PaypalButton
                                                             return={process.env.REACT_APP_PAYPAL_RETURN}
@@ -98,13 +98,14 @@ class Checkout extends(React.Component){
                                                             item_name={cards[this.state.id].name}
                                                         />
                                                     </Grid>
-                                                    <Grid item key={23} xs={12} sm={6} md={6}>
+                                                    <Grid item xs={12} sm={6} md={6}>
                                                         {/* Con retorno auto*/}
 
                                                         <PaypalButton sync={true}
                                                                       amount={cards[this.state.id].price}
                                                                       item_name={cards[this.state.id].name}
                                                         />
+
                                                     </Grid>
                                                 </Grid>
 
@@ -122,7 +123,7 @@ class Checkout extends(React.Component){
                                             </ExpansionPanelSummary>
                                             <ExpansionPanelDetails>
 
-                                                    <RedsysForm product_id={this.props.match.params.id}></RedsysForm>
+                                                <RedsysForm product_id={this.props.match.params.id}></RedsysForm>
 
                                             </ExpansionPanelDetails>
                                         </ExpansionPanel>

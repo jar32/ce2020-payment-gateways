@@ -97,7 +97,7 @@ function App() {
                         <Toolbar>
                             <PaymentIcon className={classes.icon} />
                             <Typography variant="h6" color="inherit" noWrap>
-                                Paypal Gateway
+                                Paypal & Redsys Gateway
 
                             </Typography>
                             <Typography variant="h6" color="inherit" noWrap>
@@ -134,7 +134,7 @@ function App() {
                             Nota
                         </Typography>
                         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                            Este sitio es una práctica de CE de la UMH
+                            Este sitio es una práctica de la asignatura de Comercio electrónico
                         </Typography>
 
                     </footer>
